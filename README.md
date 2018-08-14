@@ -1,2 +1,3 @@
 # Start of MagicApp
-## In progress 
+## In progress
+### Does the git work? 
