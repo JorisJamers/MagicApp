@@ -15,7 +15,7 @@ export default class App extends React.Component {
           <View style={styles.topLoyaltyView}>
             <Button
               onPress={this._onPressButton}
-              title="-"
+              title="+"
               color="#841584"
             />
             <Text style={styles.loyaltyCounterTop}>
@@ -23,14 +23,17 @@ export default class App extends React.Component {
             </Text>
             <Button
               onPress={this._onPressButton}
-              title="+"
+              title="-"
               color="#841584"
             />
           </View>
+          <Text style={styles.topTitle}>
+            Loyalty Points
+          </Text>
           <View style={styles.topCounterView}>
             <Button
               onPress={this._onPressButton}
-              title="-"
+              title="+"
               color="#841584"
             />
             <Text style={styles.mainCounterTop}>
@@ -38,16 +41,22 @@ export default class App extends React.Component {
             </Text>
             <Button
               onPress={this._onPressButton}
-              title="+"
+              title="-"
               color="#841584"
             />
           </View>
+          <Text style={styles.topTitle}>
+            Lifepoints
+          </Text>
         </View>
         <View style={{flex: 1, backgroundColor: 'darkgrey'}} >
+          <Text style={styles.bottomTitle}>
+            Lifepoints
+          </Text>
           <View style={styles.bottomCounterView}>
             <Button
               onPress={this._onPressButton}
-              title="+"
+              title="-"
               color="#841584"
             />
             <Text style={styles.mainCounterBottom}>
@@ -55,14 +64,17 @@ export default class App extends React.Component {
             </Text>
             <Button
               onPress={this._onPressButton}
-              title="-"
+              title="+"
               color="#841584"
             />
           </View>
+          <Text style={styles.bottomTitle}>
+            Loyalty Points
+          </Text>
           <View style={styles.bottomLoyaltyView}>
             <Button
               onPress={this._onPressButton}
-              title="+"
+              title="-"
               color="#841584"
             />
             <Text style={styles.loyaltyCounterTop}>
@@ -70,7 +82,7 @@ export default class App extends React.Component {
             </Text>
             <Button
               onPress={this._onPressButton}
-              title="-"
+              title="+"
               color="#841584"
             />
           </View>
@@ -84,6 +96,12 @@ const styles = StyleSheet.create({
   background: {
     flex: 1,
     flexDirection: 'column',
+  },
+  topTitle: {
+    transform: [{ rotate: '180deg'}],
+  },
+  bottomTitle: {
+
   },
   topLoyaltyView: {
     flexDirection: 'row',
@@ -100,7 +118,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    paddingTop: 50,
+    paddingTop: 10,
   },
   bottomLoyaltyView: {
     flexDirection: 'row',
@@ -125,7 +143,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   buttonContainer: {
-    flexDirection: 'row',
-    paddingBottom: 0,
+
   }
 });
