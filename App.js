@@ -4,11 +4,15 @@ import { StyleSheet, Text, Button, Alert, View } from 'react-native';
 export default class App extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
-        <View style={{flex: 1, backgroundColor: 'skyblue'}} />
+      <View style={styles.background}>
+        <View style={{flex: 1, backgroundColor: 'skyblue'}} >
+          <Text style={styles.mainCounterTop}>
+            20
+          </Text>
+        </View>
         <View style={{flex: 1, backgroundColor: 'darkgrey'}} >
-          <Text style={styles.test}>
-            If you like React on the web, you'll like React Native.
+          <Text style={styles.mainCounterBottom}>
+            20
           </Text>
         </View>
       </View>
@@ -17,12 +21,20 @@ export default class App extends React.Component {
 }
 
 const styles = StyleSheet.create({
-  container: {
+  background: {
     flex: 1,
     flexDirection: 'column',
   },
-  test: {
-    justifyContent: 'center',
+  mainCounterBottom: {
+    color: 'white',
+    fontSize: 30,
     alignItems: 'center',
   },
+  mainCounterTop: {
+    color: 'white',
+    fontSize: 30,
+    alignItems: 'center',
+    transform: [{ rotate: '180deg'}]
+  },
+
 });
