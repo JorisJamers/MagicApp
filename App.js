@@ -5,10 +5,35 @@ import { StyleSheet, Text, Button, Alert, View } from 'react-native';
 export default class App extends React.Component {
 
   _onPressButton() {
-  Alert.alert('You tapped the button!')
+  Alert.alert('This is a button, and you pressed it.')
+  }
+  _onPressTopLoyaltyMinusButton(){
+
+  }
+  _onPressTopLoyaltyAddButton(){
+
+  }
+  _onPressTopLifeMinusButton(){
+
+  }
+  _onPressTopLifeAddButton(){
+
+  }
+  _onPressTopLoyaltyAddButton(){
+
+  }
+  _onPressTopLoyaltyAddButton(){
+
+  }
+  _onPressTopLoyaltyAddButton(){
+
+  }
+  _onPressTopLoyaltyAddButton(){
+
   }
 
   render() {
+    let topLifeVar = 20;
     return (
       <View style={styles.background}>
         <View style={{flex: 1, backgroundColor: 'skyblue'}} >
@@ -37,7 +62,7 @@ export default class App extends React.Component {
               color="#841584"
             />
             <Text style={styles.mainCounterTop}>
-              20
+              {topLifeVar}
             </Text>
             <Button
               onPress={this._onPressButton}
