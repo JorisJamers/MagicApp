@@ -33,7 +33,12 @@ export default class App extends React.Component {
   }
 
   render() {
+
+    let topLoyaltyVar = 0;
     let topLifeVar = 20;
+    let bottomLifeVar = 20;
+    let bottomLoyaltyVar = 0;
+
     return (
       <View style={styles.background}>
         <View style={{flex: 1, backgroundColor: 'skyblue'}} >
@@ -124,9 +129,10 @@ const styles = StyleSheet.create({
   },
   topTitle: {
     transform: [{ rotate: '180deg'}],
+    fontSize: 20,
   },
   bottomTitle: {
-
+    fontSize: 20,
   },
   topLoyaltyView: {
     flexDirection: 'row',
