@@ -49,7 +49,7 @@ export default class App extends React.Component {
               color="#841584"
             />
             <Text style={styles.loyaltyCounterTop}>
-              0
+              {topLoyaltyVar}
             </Text>
             <Button
               onPress={this._onPressButton}
@@ -90,7 +90,7 @@ export default class App extends React.Component {
               color="#841584"
             />
             <Text style={styles.mainCounterBottom}>
-              20
+              {bottomLifeVar}
             </Text>
             <Button
               onPress={this._onPressButton}
@@ -108,7 +108,7 @@ export default class App extends React.Component {
               color="#841584"
             />
             <Text style={styles.loyaltyCounterTop}>
-              0
+              {bottomLoyaltyVar}
             </Text>
             <Button
               onPress={this._onPressButton}
