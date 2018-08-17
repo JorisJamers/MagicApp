@@ -4,55 +4,32 @@ import { StyleSheet, Text, Button, Alert, View } from 'react-native';
 
 export default class App extends React.Component {
 
-  _onPressButton() {
-  Alert.alert('This is a button, and you pressed it.')
-  }
-  _onPressTopLoyaltyMinusButton(){
-
-  }
-  _onPressTopLoyaltyAddButton(){
-
-  }
-  _onPressTopLifeMinusButton(){
-
-  }
-  _onPressTopLifeAddButton(){
-
-  }
-  _onPressTopLoyaltyAddButton(){
-
-  }
-  _onPressTopLoyaltyAddButton(){
-
-  }
-  _onPressTopLoyaltyAddButton(){
-
-  }
-  _onPressTopLoyaltyAddButton(){
-
+  constructor(props) {
+    super(props);
+    this.state = {
+      topLoyaltyVar: 0,
+      topLifeVar: 20,
+      bottomLifeVar: 20,
+      bottomLoyaltyVar: 0,
+    };
   }
 
   render() {
-
-    let topLoyaltyVar = 0;
-    let topLifeVar = 20;
-    let bottomLifeVar = 20;
-    let bottomLoyaltyVar = 0;
 
     return (
       <View style={styles.background}>
         <View style={{flex: 1, backgroundColor: 'skyblue'}} >
           <View style={styles.topLoyaltyView}>
             <Button
-              onPress={this._onPressButton}
+              onPress={() => this.state.topLoyaltyVar++}
               title="+"
               color="#841584"
             />
             <Text style={styles.loyaltyCounterTop}>
-              {topLoyaltyVar}
+              {this.state.topLoyaltyVar}
             </Text>
             <Button
-              onPress={this._onPressButton}
+              onPress={() => this.state.topLoyaltyVar--}
               title="-"
               color="#841584"
             />
@@ -62,15 +39,15 @@ export default class App extends React.Component {
           </Text>
           <View style={styles.topCounterView}>
             <Button
-              onPress={this._onPressButton}
+              onPress={() => this.state.topLifeVar++}
               title="+"
               color="#841584"
             />
             <Text style={styles.mainCounterTop}>
-              {topLifeVar}
+              {this.state.topLifeVar}
             </Text>
             <Button
-              onPress={this._onPressButton}
+              onPress={() => this.state.topLifeVar--}
               title="-"
               color="#841584"
             />
@@ -85,15 +62,15 @@ export default class App extends React.Component {
           </Text>
           <View style={styles.bottomCounterView}>
             <Button
-              onPress={this._onPressButton}
+              onPress={() => this.state.bottomLifeVar--}
               title="-"
               color="#841584"
             />
             <Text style={styles.mainCounterBottom}>
-              {bottomLifeVar}
+              {this.state.bottomLifeVar}
             </Text>
             <Button
-              onPress={this._onPressButton}
+              onPress={() => this.state.bottomLifeVar++}
               title="+"
               color="#841584"
             />
@@ -103,15 +80,15 @@ export default class App extends React.Component {
           </Text>
           <View style={styles.bottomLoyaltyView}>
             <Button
-              onPress={this._onPressButton}
+              onPress={() => this.state.bottomLoyaltyVar--}
               title="-"
               color="#841584"
             />
             <Text style={styles.loyaltyCounterTop}>
-              {bottomLoyaltyVar}
+              {this.state.bottomLoyaltyVar}
             </Text>
             <Button
-              onPress={this._onPressButton}
+              onPress={() => this.state.bottomLoyaltyVar++}
               title="+"
               color="#841584"
             />
