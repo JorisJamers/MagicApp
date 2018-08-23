@@ -28,7 +28,7 @@ export default class App extends React.Component {
         <View style={{flex: 1, backgroundColor: 'skyblue'}} >
           <View style={styles.topLoyaltyView}>
             <Button
-              onPress={updateVar('topLoyaltyView', 1)}
+              onPress={this.updateVar('topLoyaltyView', 1)}
               title="+"
               color="#841584"
             />
@@ -36,7 +36,7 @@ export default class App extends React.Component {
               {this.state.topLoyaltyVar}
             </Text>
             <Button
-              onPress={updateVar('topLoyaltyView', -1)}
+              onPress={this.updateVar('topLoyaltyView', -1)}
               title="-"
               color="#841584"
             />
@@ -46,7 +46,7 @@ export default class App extends React.Component {
           </Text>
           <View style={styles.topCounterView}>
             <Button
-              onPress={updateVar('topLifeVar', 1)}
+              onPress={this.updateVar('topLifeVar', 1)}
               title="+"
               color="#841584"
             />
@@ -54,7 +54,7 @@ export default class App extends React.Component {
               {this.state.topLifeVar}
             </Text>
             <Button
-              onPress={updateVar('topLifeVar', -1)}
+              onPress={this.updateVar('topLifeVar', -1)}
               title="-"
               color="#841584"
             />
@@ -69,7 +69,7 @@ export default class App extends React.Component {
           </Text>
           <View style={styles.bottomCounterView}>
             <Button
-              onPress={updateVar('bottomLifeVar', -1)}
+              onPress={this.updateVar('bottomLifeVar', -1)}
               title="-"
               color="#841584"
             />
@@ -77,7 +77,7 @@ export default class App extends React.Component {
               {this.state.bottomLifeVar}
             </Text>
             <Button
-              onPress={updateVar('bottomLifeVar', 1)}
+              onPress={this.updateVar('bottomLifeVar', 1)}
               title="+"
               color="#841584"
             />
@@ -87,7 +87,7 @@ export default class App extends React.Component {
           </Text>
           <View style={styles.bottomLoyaltyView}>
             <Button
-              onPress={updateVar('bottomLoyaltyVar', -1)}
+              onPress={this.updateVar('bottomLoyaltyVar', -1)}
               title="-"
               color="#841584"
             />
@@ -95,7 +95,7 @@ export default class App extends React.Component {
               {this.state.bottomLoyaltyVar}
             </Text>
             <Button
-              onPress={updateVar('bottomLoyaltyVar', 1)}
+              onPress={this.updateVar('bottomLoyaltyVar', 1)}
               title="+"
               color="#841584"
             />
