@@ -15,7 +15,7 @@ export default class App extends React.Component {
   }
 
   updateVar = (propName, value) => {
-    this.setState(prevState => {
+    this.setState((prevState) => {
       let patch = {}
       patch[propName] = prevState[propName] + value
       return patch
@@ -28,7 +28,7 @@ export default class App extends React.Component {
         <View style={{flex: 1, backgroundColor: 'skyblue'}} >
           <View style={styles.topLoyaltyView}>
             <Button
-              onPress={this.updateVar('topLoyaltyView', 1)}
+              onPress={this.updateVar('topLoyaltyVar', 1)}
               title="+"
               color="#841584"
             />
@@ -36,7 +36,7 @@ export default class App extends React.Component {
               {this.state.topLoyaltyVar}
             </Text>
             <Button
-              onPress={this.updateVar('topLoyaltyView', -1)}
+              onPress={this.updateVar('topLoyaltyVar', -1)}
               title="-"
               color="#841584"
             />
