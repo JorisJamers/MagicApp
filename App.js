@@ -91,7 +91,7 @@ export default class App extends React.Component {
               title="-"
               color="#841584"
             />
-            <Text style={styles.loyaltyCounterTop}>
+          <Text style={styles.loyaltyCounterBottom}>
               {this.state.bottomLoyaltyVar}
             </Text>
             <Button
@@ -153,6 +153,11 @@ const styles = StyleSheet.create({
     transform: [{ rotate: '180deg'}],
   },
   mainCounterBottom: {
+    color: 'white',
+    fontSize: 100,
+    alignItems: 'center',
+  },
+  loyaltyCounterBottom: {
     color: 'white',
     fontSize: 100,
     alignItems: 'center',
